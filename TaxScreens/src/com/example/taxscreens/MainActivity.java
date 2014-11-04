@@ -45,6 +45,7 @@ public class MainActivity extends Activity implements OnClickListener{
     
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		// we updated the data from web site
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		view_id=(TextView)findViewById(R.id.view_id);
