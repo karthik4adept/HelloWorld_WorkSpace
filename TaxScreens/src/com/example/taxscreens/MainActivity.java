@@ -34,6 +34,7 @@ import android.widget.Toast;
 public class MainActivity extends Activity implements OnClickListener{
 	
 	LinearLayout linearLayout;
+	//  bhjhjvhjhjhf jhjh jhdh jhd
 	Button btn_addNew, btn_applytoStore, btn_add_back, btn_add_save, btn_edit_back, btn_edit_Delete, btn_edit_Update;
 	TextView tv_addNew, tv_add_desc, tv_add_value, view_id, tv_unfilled_tax, tv_unfilled_value;
 	EditText et_add_desc, et_add_value, et_edit_desc, et_edit_value;
