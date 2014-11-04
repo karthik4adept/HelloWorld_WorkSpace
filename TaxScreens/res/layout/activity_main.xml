@@ -1,0 +1,283 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:id="@+id/relative_x" >
+   
+<RelativeLayout 
+        android:id="@+id/relative_home"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/button_Tax">
+        
+       <LinearLayout
+        android:id="@+id/linear_tax_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+		
+		<TextView
+            android:id="@+id/view_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    	   
+        <TextView
+            android:id="@+id/textView_tax_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What type of tax do you charge your customer? "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    	</LinearLayout>
+    
+    	<ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linear_tax_header" >
+        
+        <LinearLayout
+            android:id="@+id/layout_mainTax"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+        </LinearLayout>
+        
+      </ScrollView>
+      
+    <Button
+        android:id="@+id/button_NewTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Add New Tax" />
+
+    <Button
+        android:id="@+id/button_ApplyToStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Apply Tax to Store" />
+
+    
+    </RelativeLayout>
+		    
+    <RelativeLayout 
+		        android:id="@+id/relative_AddNew"
+		        android:layout_height="wrap_content"
+		        android:layout_width="fill_parent"
+		        android:layout_below="@+id/relative_home"
+		        android:visibility="gone"
+		        >
+		    
+		        <Button
+		        android:id="@+id/button_desc_back"
+		        style="?android:attr/buttonStyleSmall"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_marginTop="20dp"
+		        android:layout_marginRight="20dp"
+		        android:text="back" />
+		    
+		    <TextView
+		        android:id="@+id/textView_desc"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toRightOf="@+id/button_desc_back"
+				android:layout_alignBottom="@+id/button_desc_back"
+		        android:text="Add New Tax"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		
+		    <TextView
+		        android:id="@+id/textView_description"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_below="@+id/button_desc_back"
+		        android:layout_marginTop="30dp"
+		        android:text="Tax Description"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		    <EditText
+		        android:id="@+id/editText_description"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_below="@+id/textView_description"
+		        android:layout_marginTop="19dp"
+		        android:imeOptions="actionNext"
+		        android:singleLine="true"
+		        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+		        android:inputType="textCapSentences"		        
+		        android:ems="10" >
+		    </EditText>
+		    
+		    <TextView
+		        android:id="@+id/textView_add_unfilled_Tax"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toRightOf="@+id/editText_description"
+		        android:layout_alignBottom="@+id/editText_description"
+		        android:textSize="20dp"
+		        android:visibility="gone"
+		        android:textColor="#ff0000" />
+		    
+		    <TextView		        
+		        android:id="@+id/textView_value"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_below="@+id/editText_description"
+		        android:layout_marginTop="30dp"
+		        android:text="Tax Value"
+		        android:textAppearance="?android:attr/textAppearanceMedium" />
+		
+		    <EditText
+		        android:id="@+id/editText_value"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:layout_below="@+id/textView_value"
+		        android:layout_marginTop="19dp"
+		        android:inputType="number"
+		        android:ems="10" >
+		    </EditText>
+		
+		    <TextView
+		        android:id="@+id/textView_add_unfilled_Value"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_toRightOf="@+id/editText_value"
+		        android:layout_alignBottom="@+id/editText_value"
+		        android:textSize="20dp"
+		        android:visibility="gone"
+		        android:textColor="#ff0000" />
+		    
+		    <Button
+		        android:id="@+id/button_desc_save"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentBottom="true"
+		        android:layout_centerHorizontal="true"
+		        android:layout_marginTop="34dp"
+		        android:text="Save" />
+    </RelativeLayout>
+    
+   	<RelativeLayout 
+        android:id="@+id/relative_Edit"
+        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_below="@+id/relative_Desc"
+        android:visibility="gone"
+        >
+		    
+        <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp" >
+
+        <Button
+            android:id="@+id/button_back_edit"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="back" />
+
+        <TextView
+            android:id="@+id/textView_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Update/Delete tax"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout1"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView_edit_desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tax Description"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    	<EditText
+        android:id="@+id/editText_edit_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_below="@+id/textView_edit_desc"
+        android:layout_marginTop="10dp"
+        android:imeOptions="actionNext"
+		android:singleLine="true"
+		android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ" >
+    	    
+		</EditText>
+		
+            <TextView
+            android:id="@+id/textView_edit_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_edit_desc"
+            android:text="Tax Value"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+    
+
+    	<EditText
+        android:id="@+id/editText_edit_value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView_edit_value"
+        android:layout_marginTop="10dp"
+        android:inputType="number">
+    	</EditText>
+    	
+    	</LinearLayout>
+
+    	<LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout2"
+        android:layout_below="@+id/linearLayout2"        
+        android:layout_marginTop="30dp" >
+    	
+        <Button
+        android:id="@+id/button_edit_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"        
+        android:text="Delete" />
+
+    	<Button
+        android:id="@+id/button_edit_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="Update" />
+    
+    	</LinearLayout>
+        
+    </RelativeLayout>
+    
+   	
+</RelativeLayout>

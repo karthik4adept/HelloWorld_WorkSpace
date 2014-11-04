@@ -1,0 +1,229 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="What type of tax do you charge your customer? "
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+        
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rel_vat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linear1"
+        android:layout_below="@+id/linear1"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" >
+        
+       	<CheckBox
+            android:id="@+id/checkBox_vat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"  />
+
+        <TextView
+            android:id="@+id/textView_vat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/checkBox_vat"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/checkBox_vat"
+            android:text="Vat"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView_vat_serial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_Vat"
+            android:layout_alignBottom="@+id/textView_vat"
+            android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"            
+            android:text="1234" />
+
+        <Button
+            android:id="@+id/button_Vat"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_vat_serial"
+            android:layout_alignParentRight="true"
+            android:text=">" />
+        
+    </RelativeLayout>
+    
+    <RelativeLayout
+        android:id="@+id/rel_sales"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linear1"
+        android:layout_below="@+id/rel_vat"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" >
+        
+       	<CheckBox
+            android:id="@+id/checkBox_sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"  />
+
+        <TextView
+            android:id="@+id/textView_sales"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/checkBox_sales"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/checkBox_sales"
+            android:text="Sales"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView_sales_serial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_sales"
+            android:layout_alignBottom="@+id/textView_sales"
+            android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"            
+            android:text="1234" />
+
+        <Button
+            android:id="@+id/button_sales"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_sales_serial"
+            android:layout_alignParentRight="true"
+            android:text=">" />
+        
+    </RelativeLayout>
+	
+    <RelativeLayout
+        android:id="@+id/rel_service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linear1"
+        android:layout_below="@+id/rel_sales"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp" >
+        
+       	<CheckBox
+            android:id="@+id/checkBox_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"  />
+
+        <TextView
+            android:id="@+id/textView_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/checkBox_service"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/checkBox_service"
+            android:text="Service"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView_sales_serial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_service"
+            android:layout_alignBottom="@+id/textView_service"
+            android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"            
+            android:text="1234" />
+
+        <Button
+            android:id="@+id/button_service"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_sales_serial"
+            android:layout_alignParentRight="true"
+            android:text=">" />
+        
+    </RelativeLayout>
+	
+        <RelativeLayout
+        android:id="@+id/rel_educess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linear1"
+        android:layout_below="@+id/rel_service"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="20dp" >
+        
+       	<CheckBox
+            android:id="@+id/checkBox_educess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"  />
+
+        <TextView
+            android:id="@+id/textView_educess"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/checkBox_educess"
+            android:layout_marginLeft="10dp"
+            android:layout_alignBottom="@+id/checkBox_educess"
+            android:text="Edu-cess"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView_educess_serial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_educess"
+            android:layout_alignBottom="@+id/textView_educess"
+            android:layout_marginRight="10dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"            
+            android:text="1234" />
+
+        <Button
+            android:id="@+id/button_educess"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_educess_serial"
+            android:layout_alignParentRight="true"
+            android:text=">" />
+        
+    </RelativeLayout>
+    
+    <Button
+        android:id="@+id/button_NewTax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="Add New Tax" />
+
+    <Button
+        android:id="@+id/button_ApplyToStore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="Apply Tax to Store" />
+
+</RelativeLayout>
